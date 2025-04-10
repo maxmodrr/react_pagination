@@ -27,11 +27,10 @@ export const App: React.FC = () => {
   useEffect(() => {
     const params = new URLSearchParams();
 
-    params.set('page', '2');
-    params.set('perPage', '7');
-
+    params.set('page', page.toString());
+    params.set('perPage', perPage.toString());
     setSearchParams(params);
-  }, []);
+  }, [page, perPage]);
 
   return (
     <div className="container">
